@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualiser</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&family=Montserrat:wght@100;500&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="controls">
+            <button class="btn-square" onclick="generateNewArray()">Generate New Array</button>
+            <div class="range">
+                <label for="size-ctrl">Size :</label>
+                <br>
+                <input class="slider" id="size-ctrl" type="range" min="5" max="60" value="20" oninput= "onSizeChange(this.value)">
+            </div>
+            <div class="range">
+                <label for="speed-ctrl">Speed :</label>
+                <br>
+                <input class="slider" id="speed-ctrl" type="range" min="10" max="10000" value="100" step="100" onchange="onSpeedChange(this.value)">
+            </div>
+            <div class="sorting-btns center-flex">
+                <button id="bubble" class="sort btn-round">Bubble Sort</button>
+                <button id="selection" class="sort btn-round">Selection Sort</button>
+                <button id="merge" class="sort btn-round">Merge Sort</button>
+                <button id="quick" class="sort btn-round">Quick Sort
+                    <span class="banner">Not yet implemented</span>
+                </button>
+                <button id="insertion" class="sort btn-round">Insertion Sort</button>
+            </div>
+            <button id="sort-btn" class="btn-square" onclick="sort()">Sort</button>
+        </div>
+        <div class="visulaiser center-flex">
+            <div class="round-grey">
+
+            </div>
+            <div class="bar-wrapper">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./scripts/main.js"></script>
+<script src="./scripts/bubble.js"></script>
+<script src="./scripts/selection.js"></script>
+<script src="./scripts/merge.js"></script>
+</html>
